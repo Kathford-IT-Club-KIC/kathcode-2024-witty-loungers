@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form name="PersonalInformation" method="post">
+        {% csrf_token %}
+        <!-- Age -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="0" required><br><br>
+
+        <!-- Gender -->
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+            <option value="prefer_not_to_say">Prefer not to say</option>
+        </select><br><br>
+
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" name="height" min="0" required><br><br>
+
+        <!-- Weight -->
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" name="weight" min="0" required><br><br>
+
+        <input type="submit" value="Submit">
+<!--
+	<!-- water         
+        <label for="water">how many glass of water you would like to drink per day</label>
+        <input type="number" id="age" name="age" min="0" required><br><br>
+
+        <label for="water">do you want to get reminder for water</label><br>
+        <label for="toggle">Yes or No:</label>
+        <input type="radio" id="yes" name="toggle" value="yes" required>
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="toggle" value="no">
+        <label for="no">No</label><br><br>
+
+        <label for="water">Home many times a day you like to eat ?</label>
+        <input type="number" id="age" name="age" min="2" max="5" required><br><br>
+        <label for="toggle">Veg or Non Veg:</label>
+        <input type="radio" id="veg" name="toggle" value="veg" required>
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="toggle" value="no" required>
+        <label for="no">No</label><br><br>
+
+
+
+
+    -->
+    </form>
+{% endblock %}
