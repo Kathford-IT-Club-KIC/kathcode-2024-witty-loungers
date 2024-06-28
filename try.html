@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Optional CSS for styling the form */
+#heightForm {
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+output {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+    </style>
+    <script>
+        // Optional JavaScript to update output display dynamically
+const heightRange = document.getElementById('heightRange');
+const heightValue = document.getElementById('heightValue');
+
+heightRange.addEventListener('input', function() {
+    heightValue.textContent = `${this.value} cm`;
+});
+
+    </script>
+</head>
+<body>
+    
+    <form id="heightForm">
+        <label for="heightRange">Select Height:</label>
+        <input type="range" id="heightRange" name="heightRange" min="100" max="250" value="160" class="form-range">
+        <output for="heightRange" id="heightValue">160 cm</output>
+    </form>
+    
+</body>
+</html>
