@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/image.png");
+    background-image: url("../surimages/image.png");
     background-repeat:no-repeat;
     background-size: cover;
     font-family: 'Josefin Sans', sans-serif;
@@ -235,7 +235,7 @@ input[type="radio"]:hover {
 }
  
 #preloader {
-    background-image: url('../images/spin.png');
+  
     width: 120px;
     height: 119px;
     border-top-color: #fff;
