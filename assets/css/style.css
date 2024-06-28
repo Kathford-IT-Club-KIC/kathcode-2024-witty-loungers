@@ -1410,3 +1410,15 @@ body {
   min-height: 50px; /* Adjust the minimum height as needed */
 }
 
+.water-reminder {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.water-reminder h2 {
+  margin-bottom: 10px;
+}
+
