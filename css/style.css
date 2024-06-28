@@ -222,27 +222,7 @@ input[type="radio"]:hover {
     box-shadow: none;
     cursor: pointer !important;
 }
- 
-#success {
-    display: none;
-}
- 
-#success h4 {
-    color: #DC3545;
-}
- 
-.back-link {
-    font-weight: 700;
-    color: #18b940;
-    text-decoration: none;
-    font-size: 18px;
-}
- 
-.back-link:hover {
-    color: #1d9712;
-}
 
-/* preloader */
 
 #preloader-wrapper {
     width: 100%;
