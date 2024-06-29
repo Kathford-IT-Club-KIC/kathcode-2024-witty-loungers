@@ -422,13 +422,6 @@ body {
 .navbar-link:is(:hover, :focus, .active) { color: var(--rich-black-fogra-29-1); }
 
 
-
-
-
-/*-----------------------------------*\
-  #HERO
-\*-----------------------------------*/
-
 .hero {
   color: var(--cadet-gray);
   text-align: center;
@@ -621,12 +614,6 @@ body {
 }
 
 
-
-
-
-/*-----------------------------------*\
-  #CLASS
-\*-----------------------------------*/
 
 .class { padding-block-start: calc(var(--section-padding)); }
 
@@ -1214,6 +1201,13 @@ body {
   }
 
   .hero .container {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    align-items: center;
+    gap: 25px;
+  }
+
+  .hero .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -1247,6 +1241,12 @@ body {
     align-items: center;
     gap: 50px;
   }
+  /* .about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+  } */
 
   .about-banner { margin-block-end: 0; }
 
@@ -1385,3 +1385,6 @@ body {
   min-width: 50px; /* Adjust the minimum width as needed */
   min-height: 50px; /* Adjust the minimum height as needed */
 }
+
+
+

@@ -4,62 +4,12 @@
 <link rel="stylesheet" href="{% static  'css/style.css' %}">
 {% endblock %}
 
+{% block navbar %}
+  {% include 'navbar.html'%}
+{% endblock %}
 {% block content %}
-
-<header class="header" data-header>
-    <div class="container">
-
-      <a href="#" class="logo">
-      <img src="{% static 'web_image/logo.png' %}" alt="Logo" class="min-size">
-        <span class="span">BeWell</span>
-      </a>
-
-      <nav class="navbar" data-navbar>
-
-        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
-        </button>
-
-        <ul class="navbar-list">
-
-          <li>
-            <a href="#home" class="navbar-link" data-nav-link>Home</a>
-          </li>
-
-          <li>
-            <a href="#about" class="navbar-link" data-nav-link>About Us</a>
-          </li>
-
-          <li>
-            <a href="#class" class="navbar-link" data-nav-link>Categories</a>
-          </li>
-
-          <li>
-            <a href="#footer" class="navbar-link" data-nav-link>Contact Us</a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-    <a href="{% url 'bewell:survey' %}" class="btn btn-secondary">Get Started</a>
-
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
-
-    </div>
-  </header>
-
-
-
-
-
   <main>
     <article>
-
 
       <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero" data-section
         style="background-image: url('./assets/images/hero-bg.png')">
@@ -86,15 +36,8 @@
 
             <img src="{% static 'web_image/hero-banner.png' %}" width="660" height="753" alt="hero banner" class="w-100">
 
-            {% comment %} <img src="./assets/images/hero-circle-one.png" width="666" height="666" aria-hidden="true" alt=""
-              class="circle circle-1"> {% endcomment %}
-
               <img src="{% static 'web_image/hero-circle-one.png' %}" width="666" height="666" aria-hidden="true" alt="" class="circle circle-2">
               <img src="{% static 'web_image/hero-circle-two.png' %}" width="666" height="666" aria-hidden="true" alt="" class="circle circle-2">
-
-            <!-- <img src="./assets/images/heart-rate.svg" width="255" height="270" alt="heart rate"
-              class="abs-img abs-img-1">
-            <img src="./assets/images/calories.svg" width="348" height="224" alt="calories" class="abs-img abs-img-2"> -->
 
           </div>
 
@@ -208,19 +151,6 @@
                     Customize your meal plan with BeWell's Dietary Guidance. Tell us your daily meal preferences, and your health goals like weight loss or muscle gain. Our system creates a personalized diet routine to support your journey to better health.
                   </p>
 
-                  <!-- <div class="card-progress">
-
-                    <div class="progress-wrapper">
-                      <p class="progress-label">Class Full</p>
-
-                      <span class="progress-value">70%</span>
-                    </div>
-
-                    <div class="progress-bg">
-                      <div class="progress-bar" style="width: 70%"></div>
-                    </div>
-
-                  </div> -->
 
                 </div>
 
@@ -290,120 +220,8 @@
 
 
 
-
-
-      <!-- 
-        - #BLOG
-      -->
-
-      <!-- <section class="section blog" id="blog" aria-label="blog">
-        <div class="container">
-
-          <p class="section-subtitle">Our News</p>
-
-          <h2 class="h2 section-title text-center">Latest Blog Feed</h2>
-
-          <ul class="blog-list has-scrollbar">
-
-            <li class="scrollbar-item">
-              <div class="blog-card">
-
-                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
-                  <img src="./assets/images/blog-1.jpg" width="440" height="270" loading="lazy"
-                    alt="Going to the gym for the first time" class="img-cover">
-
-                  <time class="card-meta" datetime="2022-07-07">7 July 2022</time>
-                </div>
-
-                <div class="card-content">
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Going to the gym for the first time</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Praesent id ipsum pellentesque lectus dapibus condimentum curabitur eget risus quam. In hac
-                    habitasse platea dictumst.
-                  </p>
-
-                  <a href="#" class="btn-link has-before">Read More</a>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="blog-card">
-
-                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
-                  <img src="./assets/images/blog-2.jpg" width="440" height="270" loading="lazy"
-                    alt="Parturient accumsan cacus pulvinar magna" class="img-cover">
-
-                  <time class="card-meta" datetime="2022-07-07">7 July 2022</time>
-                </div>
-
-                <div class="card-content">
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Parturient accumsan cacus pulvinar magna</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Praesent id ipsum pellentesque lectus dapibus condimentum curabitur eget risus quam. In hac
-                    habitasse platea dictumst.
-                  </p>
-
-                  <a href="#" class="btn-link has-before">Read More</a>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="blog-card">
-
-                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
-                  <img src="./assets/images/blog-3.jpg" width="440" height="270" loading="lazy"
-                    alt="Risus purus namien parturient accumsan cacus" class="img-cover">
-
-                  <time class="card-meta" datetime="2022-07-07">7 July 2022</time>
-                </div>
-
-                <div class="card-content">
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Risus purus namien parturient accumsan cacus</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Praesent id ipsum pellentesque lectus dapibus condimentum curabitur eget risus quam. In hac
-                    habitasse platea dictumst.
-                  </p>
-
-                  <a href="#" class="btn-link has-before">Read More</a>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section> -->
-
     </article>
   </main>
-
-
-
-
-
-  <!-- 
-    - #FOOTER
-  -->
 
   <footer class="footer" id="footer">
 
@@ -522,17 +340,6 @@
           &copy; 2024 BeWell. All Rights Reserved By <a href="#" class="copyright-link">Kathford Int'l College of Management.</a>
         </p>
 
-        <!-- <ul class="footer-bottom-list">
-
-          <li>
-            <a href="#" class="footer-bottom-link has-before">Privacy Policy</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-bottom-link has-before">Terms & Condition</a>
-          </li>
-
-        </ul> -->
 
       </div>
     </div>
@@ -540,29 +347,8 @@
   </footer>
 
 
-
-
-
-  <!-- 
-    - #BACK TO TOP
-  -->
-
-  <!-- <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
-  </a> -->
-
-
-
-
-
-  <!-- 
-    - custom js link
-  -->
   <script src="{% static 'js/script.js' %}"></script>
 
-  <!-- 
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
