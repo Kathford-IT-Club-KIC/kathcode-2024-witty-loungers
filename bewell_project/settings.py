@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_quill',
     'bewell',
 ]
 
@@ -124,7 +125,61 @@ STATICFILES_DIRS = [
     BASE_DIR / 'staticfiles',
 ]
 
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'mediafiles',
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+QUILL_CONFIGS = {
+    'default': {
+        'theme': 'snow',  # You can change to 'bubble' if you prefer that theme
+        'modules': {
+            'syntax': True,  # Enable syntax highlighting
+            'toolbar': [
+                # Font size and style
+                [{'font': []}],
+                [{'size': ['small', False, 'large', 'huge']}],  # custom dropdown
+
+                # Header levels
+                [{'header': '1'}, {'header': '2'}, {'header': [3, 4, 5, 6]}, {'header': [1, 2, 3, 4, 5, 6, False]}],
+
+                # Text styling
+                ['bold', 'italic', 'underline', 'strike'],  # toggled buttons
+
+                # Block level formats
+                [{'align': []}],
+                [{'list': 'ordered'}, {'list': 'bullet'}],
+                [{'indent': '-1'}, {'indent': '+1'}],  # outdent/indent
+                [{'direction': 'rtl'}],  # text direction
+
+                # More text options
+                [{'color': []}, {'background': []}],  # dropdown with defaults from theme
+                [{'script': 'sub'}, {'script': 'super'}],  # superscript/subscript
+
+                # Blockquote, code block, link
+                ['blockquote', 'code-block', 'link'],
+
+                # Embed options
+                ['image', 'video'],
+
+                # Undo and redo
+                ['clean']  # remove formatting button
+            ],
+        },
+    }
+}
+
+
+
+
+EMAIL_BACKEND = config('EMAIL_BACKEND')
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
